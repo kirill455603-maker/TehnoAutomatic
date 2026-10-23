@@ -1,0 +1,73 @@
+From 6eeb1acffbc694478c24122fce248d50a2b430b2 Mon Sep 17 00:00:00 2001
+From: "qwen.ai[bot]" <qwenlm-intl@service.alibaba.com>
+Date: Fri, 23 Oct 2026 13:56:09 +0000
+Subject: [PATCH] =?UTF-8?q?tools:=20=D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82?=
+ =?UTF-8?q?=D1=8B=20=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8?=
+ =?UTF-8?q?=D1=8F=20=D0=BF=D0=B0=D1=82=D1=87=D0=B5=D0=B9=20=D1=81=20=D0=B0?=
+ =?UTF-8?q?=D0=B2=D1=82=D0=BE=D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B8?=
+ =?UTF-8?q?=D0=B5=D0=BC=20=D1=84=D0=B0=D0=B9=D0=BB=D0=B0=20=D0=BF=D0=BE?=
+ =?UTF-8?q?=D1=81=D0=BB=D0=B5=20=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D0=BD=D0=B5?=
+ =?UTF-8?q?=D0=BD=D0=B8=D1=8F?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ apply_patch.bat | 18 ++++++++++++++++++
+ apply_patch.sh  | 19 +++++++++++++++++++
+ 2 files changed, 37 insertions(+)
+ create mode 100755 apply_patch.bat
+ create mode 100755 apply_patch.sh
+
+diff --git a/apply_patch.bat b/apply_patch.bat
+new file mode 100755
+index 0000000..d24b520
+--- /dev/null
++++ b/apply_patch.bat
+@@ -0,0 +1,18 @@
++@echo off
++rem apply_patch.bat - применяет патч из patches/ и удаляет его после применения
++rem Использование: apply_patch.bat 0001-xxx.patch
++setlocal
++set PATCH=%~1
++if "%PATCH%"=="" ( echo Использование: apply_patch.bat ^<имя файла патча^> & exit /b 1 )
++if not exist "%PATCH%" if exist "patches\%PATCH%" set PATCH=patches\%PATCH%
++if not exist "%PATCH%" ( echo Файл не найден: %PATCH% & exit /b 1 )
++git apply --check "%PATCH%" 2>nul
++if %errorlevel%==0 (
++    git am --keep-non-patch -q "%PATCH%" && echo Патч применен с коммитом
++) else (
++    echo git am невозможен, пробую git apply...
++    git apply --3way "%PATCH%" && echo Патч наложен без автокоммита
++)
++del "%PATCH%"
++echo Файл %PATCH% удален.
++endlocal
+diff --git a/apply_patch.sh b/apply_patch.sh
+new file mode 100755
+index 0000000..7b12acd
+--- /dev/null
++++ b/apply_patch.sh
+@@ -0,0 +1,19 @@
++#!/usr/bin/env bash
++# apply_patch.sh — применяет патч из папки patches/ и удаляет его после успешного применения.
++# Использование: ./apply_patch.sh patches/0001-xxx.patch   (или просто имя файла, если он в patches/)
++set -e
++
++PATCH="$1"
++[ -z "$PATCH" ] && { echo "Использование: $0 <путь/к/патчу>"; exit 1; }
++[ ! -f "$PATCH" ] && [ -f "patches/$PATCH" ] && PATCH="patches/$PATCH"
++[ ! -f "$PATCH" ] && { echo "Файл не найден: $PATCH"; exit 1; }
++
++if git apply --check "$PATCH" 2>/dev/null; then
++    git am --keep-non-patch -q "$PATCH" && echo "✅ Патч применён с коммитом"
++else
++    echo "⚠️  git am невозможен (патч уже применён или конфликт) — проверяю git apply..."
++    git apply --3way "$PATCH" && echo "✅ Патч наложен (без автокоммита)"
++fi
++
++rm "$PATCH"
++echo "🗑️  Файл $PATCH удалён."
+-- 
+2.39.5
+
