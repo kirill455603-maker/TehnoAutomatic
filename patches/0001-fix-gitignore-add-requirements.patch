@@ -1,0 +1,35 @@
+From: qwen.ai[bot] <qwenlm-intl@service.alibaba.com>
+Subject: [PATCH] chore: исправлен .gitignore, добавлен requirements.txt
+
+---
+ .gitignore       | 2 +-
+ requirements.txt | 9 +++++++++
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/.gitignore b/.gitignore
+index 48bc367..9644be7 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,6 +1,6 @@
+ build/
+ dist/
+-__pacache__/
++__pycache__/
+ *.pyc
+ venv/
+ .idea/
+diff --git a/requirements.txt b/requirements.txt
+new file mode 100644
+index 0000000..e6a1b45
+--- /dev/null
++++ b/requirements.txt
+@@ -0,0 +1,9 @@
++# Зависимости проекта Technopro RPA
++# Установка: pip install -r requirements.txt
++
++PySide6          # GUI-фреймворк (окно, страницы, диалоги)
++pyautogui        # RPA: распознавание экрана по PNG-шаблонам, клики, ввод
++pyscreeze        # Распознавание изображений (logic/automation.py)
++keyboard         # Глобальные горячие клавиши
++pyperclip        # Работа с буфером обмена
++openpyxl         # Excel-справочники
