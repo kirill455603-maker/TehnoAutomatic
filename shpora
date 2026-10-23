@@ -1,0 +1,531 @@
+﻿================================================================================
+                    ШПАРГАЛКА PySide6 — ПРОЙДЕННЫЕ ВИДЖЕТЫ
+================================================================================
+
+--------------------------------------------------------------------------------
+1. БАЗОВЫЕ КЛАССЫ
+--------------------------------------------------------------------------------
+
+QApplication
+  - QApplication(sys.argv)   создание приложения
+  - app.exec()               запуск цикла событий
+
+QWidget
+  - setWindowTitle('Текст')  заголовок окна
+  - resize(ширина, высота)   размер окна
+  - move(x, y)               позиция на экране
+  - show()                   показать
+  - hide()                   скрыть
+  - setLayout(layout)        установить layout
+
+QMainWindow (для меню, тулбара, статус-бара)
+  - setCentralWidget(widget) обязательный центральный виджет
+  - menuBar()                получить меню-бар
+
+
+--------------------------------------------------------------------------------
+2. QLabel — ТЕКСТОВАЯ МЕТКА
+--------------------------------------------------------------------------------
+
+  - QLabel('Текст', parent)  создание
+  - setText('Текст')         изменить текст
+  - text()                   получить текст
+  - setMinimumWidth(n)       минимальная ширина
+
+Сигналов нет (только для отображения)
+
+
+--------------------------------------------------------------------------------
+3. QPushButton — КНОПКА
+--------------------------------------------------------------------------------
+
+  - QPushButton('Текст', parent)  создание
+  - setText('Текст')              изменить текст
+  - resize(w, h)                  размер
+  - setEnabled(True/False)        вкл/выкл
+  - click()                       нажать программно
+
+Сигналы:
+  - clicked                  при нажатии
+
+
+--------------------------------------------------------------------------------
+4. QCheckBox — ЧЕКБОКС
+--------------------------------------------------------------------------------
+
+  - QCheckBox('Текст', parent)  создание
+  - isChecked()                 True/False
+  - setChecked(True/False)      поставить/снять галочку
+
+Сигналы:
+  - stateChanged(int)           при изменении состояния
+
+
+--------------------------------------------------------------------------------
+5. QRadioButton — ПЕРЕКЛЮЧАТЕЛЬ
+--------------------------------------------------------------------------------
+
+  - QRadioButton('Текст', parent)  создание
+  - isChecked()                    True/False
+  - setChecked(True/False)         выбрать/сбросить
+
+QButtonGroup (группировка переключателей):
+  - QButtonGroup()                 создание группы
+  - addButton(radio)               добавить в группу
+
+Сигналы:
+  - toggled(bool)                  при изменении состояния
+
+
+--------------------------------------------------------------------------------
+6. QLineEdit — ОДНОСТРОЧНЫЙ ВВОД
+--------------------------------------------------------------------------------
+
+  - QLineEdit(parent)              создание
+  - text()                         получить текст (строка)
+  - setText('Текст')               установить текст
+  - clear()                        очистить
+  - setPlaceholderText('Подсказка')  серый текст-подсказка
+
+Сигналы:
+  - returnPressed                  при нажатии Enter
+  - textChanged(str)               при каждом изменении
+
+
+--------------------------------------------------------------------------------
+7. QTextEdit — МНОГОСТРОЧНЫЙ ВВОД
+--------------------------------------------------------------------------------
+
+  - QTextEdit(parent)              создание
+  - toPlainText()                  получить весь текст
+  - setPlainText('Текст')          заменить весь текст
+  - append('Текст')                добавить в конец
+  - insertPlainText('Текст')       вставить в позицию курсора
+  - clear()                        очистить
+
+Сигналы:
+  - textChanged()                  при изменении текста
+
+
+--------------------------------------------------------------------------------
+8. QSpinBox / QDoubleSpinBox — ЧИСЛОВЫЕ ПОЛЯ
+--------------------------------------------------------------------------------
+
+QSpinBox — целые числа
+QDoubleSpinBox — дробные числа
+
+  - setRange(min, max)             диапазон
+  - setValue(число)                установить значение
+  - value()                        получить (возвращает ЧИСЛО!)
+  - setSingleStep(шаг)             шаг изменения
+  - setSuffix(' текст')            текст после числа
+  - setPrefix('текст ')            текст перед числом
+
+Сигналы:
+  - valueChanged(int/double)       при изменении значения
+
+
+--------------------------------------------------------------------------------
+9. QComboBox — ВЫПАДАЮЩИЙ СПИСОК
+--------------------------------------------------------------------------------
+
+  - QComboBox(parent)              создание
+  - addItem('Элемент')             добавить один
+  - addItems(['список'])           добавить несколько
+  - currentText()                  текст выбранного
+  - currentIndex()                 индекс выбранного
+  - setCurrentIndex(n)             выбрать по индексу
+  - clear()                        очистить
+
+Сигналы:
+  - currentIndexChanged(int)       при смене элемента
+  - currentTextChanged(str)        при смене текста
+
+
+--------------------------------------------------------------------------------
+10. QListWidget — СПИСОК
+--------------------------------------------------------------------------------
+
+  - QListWidget(parent)            создание
+  - addItem('Элемент')             добавить один
+  - addItems(['список'])           добавить несколько
+  - currentItem()                  выделенный элемент (QListWidgetItem)
+  - currentRow()                   индекс выделенного (-1 если нет)
+  - row(item)                      индекс элемента по объекту
+  - takeItem(row)                  удалить по индексу
+  - count()                        количество элементов
+  - clear()                        очистить всё
+
+Сигналы:
+  - currentItemChanged(item, item) при смене выделения
+  - itemClicked(item)              при клике
+  - itemDoubleClicked(item)        при двойном клике
+
+
+--------------------------------------------------------------------------------
+11. QTableWidget — ТАБЛИЦА
+--------------------------------------------------------------------------------
+
+  - QTableWidget(parent)           создание
+  - setRowCount(n)                 количество строк
+  - setColumnCount(n)              количество столбцов
+  - setHorizontalHeaderLabels([...])  заголовки столбцов
+  - setItem(row, col, QTableWidgetItem('текст'))  заполнить ячейку
+  - item(row, col)                 получить объект ячейки
+  - currentItem()                  выделенная ячейка
+  - currentRow()                   номер выделенной строки
+  - removeRow(row)                 удалить строку
+  - resizeColumnsToContents()      подогнать ширину
+  - clear()                        очистить
+
+Сигналы:
+  - cellClicked(row, col)          при клике на ячейку
+  - cellDoubleClicked(row, col)    при двойном клике
+  - cellChanged(row, col)          при изменении
+
+
+--------------------------------------------------------------------------------
+12. QSlider — ПОЛЗУНОК
+--------------------------------------------------------------------------------
+
+  - QSlider(Qt.Horizontal)         горизонтальный
+  - QSlider(Qt.Vertical)           вертикальный
+  - setRange(min, max)             диапазон
+  - setValue(значение)             установить
+  - value()                        получить
+  - setSingleStep(шаг)             шаг стрелок
+  - setPageStep(шаг)               шаг клика по полосе
+
+Сигналы:
+  - valueChanged(int)              при изменении
+
+
+--------------------------------------------------------------------------------
+13. QProgressBar — ПРОГРЕСС-БАР
+--------------------------------------------------------------------------------
+
+  - QProgressBar(parent)           создание
+  - setRange(min, max)             диапазон (обычно 0-100)
+  - setValue(значение)             установить
+  - value()                        получить
+  - setFormat('%p%')               формат текста
+
+Сигналов нет (только для отображения)
+
+
+--------------------------------------------------------------------------------
+14. QTabWidget — ВКЛАДКИ
+--------------------------------------------------------------------------------
+
+  - QTabWidget()                   создание
+  - addTab(виджет, 'Заголовок')    добавить вкладку
+  - currentIndex()                 индекс текущей
+  - setCurrentIndex(n)             переключить
+  - count()                        количество вкладок
+  - removeTab(index)               удалить вкладку
+
+Сигналы:
+  - currentChanged(int)            при смене вкладки
+
+
+--------------------------------------------------------------------------------
+15. QStackedWidget — ПЕРЕКЛЮЧЕНИЕ СТРАНИЦ
+--------------------------------------------------------------------------------
+
+  - QStackedWidget()               создание
+  - addWidget(виджет)              добавить страницу
+  - currentIndex()                 индекс текущей
+  - setCurrentIndex(n)             переключить
+  - setCurrentWidget(виджет)       переключить на виджет
+  - count()                        количество страниц
+
+Сигналы:
+  - currentChanged(int)            при смене страницы
+
+
+--------------------------------------------------------------------------------
+16. LAYOUTS — МЕНЕДЖЕРЫ РАЗМЕЩЕНИЯ
+--------------------------------------------------------------------------------
+
+QVBoxLayout (вертикальный):
+  - addWidget(виджет)              добавить виджет
+  - addLayout(layout)              вложить другой layout
+
+QHBoxLayout (горизонтальный):
+  - addWidget(виджет)              добавить виджет
+  - addLayout(layout)              вложить другой layout
+
+QGridLayout (сетка):
+  - addWidget(виджет, строка, колонка)  добавить в ячейку
+  - addWidget(виджет, строка, колонка, rowspan, colspan)
+                                     добавить с захватом ячеек
+
+
+--------------------------------------------------------------------------------
+17. QMessageBox — ДИАЛОГОВЫЕ ОКНА
+--------------------------------------------------------------------------------
+
+  - information(parent, 'Заголовок', 'Текст')     информация
+  - warning(parent, 'Заголовок', 'Текст')         предупреждение
+  - critical(parent, 'Заголовок', 'Текст')        ошибка
+  - question(parent, 'Заголовок', 'Текст',
+             QMessageBox.Yes | QMessageBox.No,
+             QMessageBox.No)                      вопрос
+
+Пример:
+  reply = QMessageBox.question(self, 'Вопрос', 'Ты уверен?',
+                                QMessageBox.Yes | QMessageBox.No,
+                                QMessageBox.No)
+  if reply == QMessageBox.Yes:
+      # Действие
+
+
+--------------------------------------------------------------------------------
+18. QAction, QMenuBar, QMenu — МЕНЮ
+--------------------------------------------------------------------------------
+
+QAction (действие):
+  - QAction('Текст', parent)     создание
+  - setShortcut('Ctrl+X')        горячая клавиша
+  - triggered                    сигнал при выборе
+
+QMenuBar (меню-бар):
+  - self.menuBar()               получить меню-бар (в QMainWindow)
+  - addMenu('Название')          создать меню
+
+QMenu (выпадающее меню):
+  - addAction(action)            добавить действие
+  - addSeparator()               добавить разделитель
+
+
+--------------------------------------------------------------------------------
+19. ПОДКЛЮЧЕНИЕ СИГНАЛОВ К СЛОТАМ
+--------------------------------------------------------------------------------
+
+Базовый синтаксис:
+  виджет.сигнал.connect(self.метод)
+
+Пример:
+  button.clicked.connect(self.on_click)
+
+ВАЖНО:
+  - Без скобок! Передаём функцию, не вызываем её
+  - Слот — обычный метод с self первым аргументом
+  - Некоторые сигналы передают параметры:
+    slider.valueChanged.connect(self.on_value_changed)
+    def on_value_changed(self, value):
+        print(value)
+
+
+--------------------------------------------------------------------------------
+20. QT DESIGNER — РАБОТА С .UI ФАЙЛАМИ
+--------------------------------------------------------------------------------
+
+Конвертация .ui в .py:
+  pyside6-uic файл.ui -o ui_файл.py
+
+Использование в коде:
+  from ui_файл import Ui_MainWindow
+
+  class MyApp(QMainWindow):
+      def __init__(self):
+          super().__init__()
+          self.ui = Ui_MainWindow()
+          self.ui.setupUi(self)
+
+          # Виджеты доступны через self.ui
+          self.ui.button.clicked.connect(self.on_click)
+
+ВАЖНО:
+  - ui_файл.py НЕ запускается напрямую
+  - Создай main.py и импортируй из него
+  - Не редактируй ui_файл.py вручную
+
+
+================================================================================
+                    ШПАРГАЛКА PySide6 — ИЗУЧЕННЫЕ НОВЫЕ ТЕМИ
+================================================================================
+
+--------------------------------------------------------------------------------
+1. QCLIPBOARD — БУФЕР ОБМЕНА
+--------------------------------------------------------------------------------
+
+Получить буфер:
+  clipboard = QGuiApplication.clipboard()
+
+Чтение:
+  text = clipboard.text()                    # простой способ
+  mime = clipboard.mimeData()                # продвинутый способ
+  if mime.hasText():                         # проверить, есть ли текст
+      text = mime.text()                     # получить текст
+
+Запись:
+  clipboard.setText("текст")                 # записать текст
+
+Сигналы:
+  clipboard.dataChanged                      # при любом изменении буфера
+
+ВАЖНО:
+  - dataChanged срабатывает и при чтении, и при записи
+  - Нужна защита от петли (см. ниже)
+
+
+--------------------------------------------------------------------------------
+2. ЗАЩИТА ОТ ПЕТЛИ (флаг)
+--------------------------------------------------------------------------------
+
+Проблема:
+  setText() → dataChanged → обработчик → setText() → БЕСКОНЕЧНЫЙ ЦИКЛ
+
+Решение:
+  self._ignore_next = False
+  
+  def copy_to_clipboard(self, text):
+      self._ignore_next = True          # 1. Ставим флаг
+      self.clipboard.setText(text)      # 2. Пишем в буфер
+  
+  def on_clipboard_changed(self):
+      if self._ignore_next:             # 3. Видим флаг
+          self._ignore_next = False     # 4. Сбрасываем
+          return                        # 5. Выходим
+      # нормальная обработка...
+
+ПРАВИЛО:
+  Сначала флаг → потом setText()
+
+
+--------------------------------------------------------------------------------
+3. QListWidgetItem И РОЛИ ДАННЫХ
+--------------------------------------------------------------------------------
+
+Создание элемента:
+  from PySide6.QtCore import Qt
+  from PySide6.QtWidgets import QListWidgetItem
+  
+  item = QListWidgetItem()
+
+Роли данных (что хранить):
+  Qt.DisplayRole    — видимый текст
+  Qt.ToolTipRole    — подсказка при наведении
+  Qt.UserRole       — твои скрытые данные
+
+Запись:
+  item.setText("превью")                    # DisplayRole
+  item.setToolTip("подсказка")              # ToolTipRole
+  item.setData(Qt.UserRole, "полный текст") # UserRole
+
+Чтение:
+  preview = item.text()                     # DisplayRole
+  tooltip = item.toolTip()                  # ToolTipRole
+  full_text = item.data(Qt.UserRole)        # UserRole
+
+Добавление в список:
+  list_widget.addItem(item)
+
+Получение текущего элемента:
+  item = list_widget.currentItem()
+  if item:
+      full_text = item.data(Qt.UserRole)
+
+
+--------------------------------------------------------------------------------
+4. QMenu — КОНТЕКСТНОЕ МЕНЮ (popup)
+--------------------------------------------------------------------------------
+
+Включение сигнала правого клика:
+  list_widget.setContextMenuPolicy(Qt.CustomContextMenu)
+
+Подключение сигнала:
+  list_widget.customContextMenuRequested.connect(self.show_menu)
+
+Создание меню:
+  menu = QMenu(self)
+  action_copy = menu.addAction("📋 Копировать")
+  action_delete = menu.addAction("🗑 Удалить")
+  menu.addSeparator()                       # разделитель
+
+Показ меню:
+  global_pos = list_widget.mapToGlobal(position)
+  chosen = menu.exec(global_pos)
+
+Обработка выбора:
+  if chosen == action_copy:
+      # копировать
+  elif chosen == action_delete:
+      # удалить
+  else:
+      # закрыли без выбора (None)
+
+Полезные методы:
+  item = list_widget.itemAt(position)       # элемент под курсором
+  row = list_widget.row(item)               # индекс элемента
+  list_widget.takeItem(row)                 # удалить элемент
+
+
+--------------------------------------------------------------------------------
+5. СВЯЗКА: КЛИК ПО ЭЛЕМЕНТУ + КОПИРОВАНИЕ
+--------------------------------------------------------------------------------
+
+Сигнал:
+  list_widget.itemClicked.connect(self.on_click)
+
+Обработчик:
+  def on_click(self, item):
+      full_text = item.data(Qt.UserRole)
+      self._ignore_next = True
+      self.clipboard.setText(full_text)
+
+
+--------------------------------------------------------------------------------
+6. ТИПИЧНАЯ СТРУКТУРА ДЛЯ CLIPFORGE
+--------------------------------------------------------------------------------
+
+class ClipModel(QObject):
+    item_added = Signal(str)
+    
+    def __init__(self):
+        self.clipboard = QGuiApplication.clipboard()
+        self._ignore_next = False
+        self.clipboard.dataChanged.connect(self.on_clipboard_changed)
+    
+    def on_clipboard_changed(self):
+        if self._ignore_next:
+            self._ignore_next = False
+            return
+        
+        mime = self.clipboard.mimeData()
+        if mime.hasText():
+            text = mime.text().strip()
+            if text:
+                self.item_added.emit(text)
+    
+    def copy_to_clipboard(self, text):
+        self._ignore_next = True
+        self.clipboard.setText(text)
+
+
+class ClipView(QMainWindow):
+    def add_item(self, text):
+        item = QListWidgetItem()
+        preview = text[:100] + "..." if len(text) > 100 else text
+        item.setText(preview)
+        item.setData(Qt.UserRole, text)
+        item.setToolTip(text)
+        self.history_list.addItem(item)
+
+
+class ClipController(QObject):
+    def __init__(self, model, view):
+        self.model = model
+        self.view = view
+        self.model.item_added.connect(self.view.add_item)
+        self.view.history_list.itemClicked.connect(self.copy_item)
+    
+    def copy_item(self, item):
+        text = item.data(Qt.UserRole)
+        self.model.copy_to_clipboard(text)
+
+
+================================================================================
+                              КОНЕЦ ШПАРГАЛКИ
+================================================================================

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WidgetCutting</class>
+ <widget class="QWidget" name="WidgetCutting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>579</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignBottom">
+    <widget class="QLabel" name="label_3">
+     <property name="styleSheet">
+      <string notr="true">background: none;
+padding: 5 2 2 5;
+color: rgb(214, 214, 214);
+border-bottom: 1px solid white;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Операция: Отрезная</string>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+    <widget class="QWidget" name="verticalWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background: none;</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">background: none;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>Диаметр:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox">
+          <property name="styleSheet">
+           <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: none;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="styleSheet">
+           <string notr="true">background: none;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>мм.</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">background: none;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>Материал:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_details">
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+	padding: 3, 3, 3, 3;
+	width: 60px;
+	border: none;
+	border-radius: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 10pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentText">
+           <string/>
+          </property>
+          <property name="insertPolicy">
+           <enum>QComboBox::InsertPolicy::NoInsert</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Выберите материал...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

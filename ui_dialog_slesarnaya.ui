@@ -1,0 +1,1778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogSlesarnaya</class>
+ <widget class="QDialog" name="DialogSlesarnaya">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>713</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>630</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Слесарная</string>
+  </property>
+  <property name="windowOpacity">
+   <double>0.950000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: white;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(0, 57, 95), stop:1 rgb(0, 83, 122))</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QLabel" name="label_8">
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: none;
+</string>
+     </property>
+     <property name="text">
+      <string>Слесарная</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">border: none;
+background: transparent;</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="3">
+       <widget class="QPushButton" name="btn_meh">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 20px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Мех. обработка</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="btn_svarka">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 20px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Сварка</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="btn_sborka">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 20px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Сборка</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="page_sborka">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QListWidget" name="listWidget_sborka">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+/* ───────────── Сам список ───────────── */
+QListWidget {
+    background: transparent;
+    font-size: 10pt;
+	border: none;
+    color: #E8EAF0;
+}
+
+/* ───────────── Элементы ───────────── */
+QListWidget::item {
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    margin: 2px 6px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #FFFFFF;
+}
+
+QListWidget::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(94, 129, 255, 0.32),
+        stop:1 rgba(94, 129, 255, 0.08));
+    color: #FFFFFF;
+}
+
+QListWidget::item:selected:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(94, 129, 255, 0.42),
+        stop:1 rgba(94, 129, 255, 0.14));
+}
+
+/* убираем рамку/пунктир при фокусе */
+QListWidget:focus,
+QListWidget::item:focus {
+    outline: none;
+    border: none;
+}
+
+/* ───────────── Вертикальный скроллбар ───────────── */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 4px 2px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.18);
+    min-height: 30px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical { background: transparent; }
+
+/* ───────────── Горизонтальный скроллбар ───────────── */
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 2px 4px;
+    border-radius: 5px;
+}
+QScrollBar::handle:horizontal {
+    background: rgba(255, 255, 255, 0.18);
+    min-width: 30px;
+    border-radius: 5px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal { width: 0; }
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal { background: transparent; }
+</string>
+         </property>
+         <property name="tabKeyNavigation">
+          <bool>false</bool>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Протирка</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="text_sborka_1" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_14">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>1</number>
+          </property>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_22">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: none;</string>
+            </property>
+            <property name="text">
+             <string>Укажите параметры:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QComboBox" name="comboBox_position">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 10pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>Внутреннюю</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Внешнюю</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>поверхность</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QComboBox" name="comboBox_detail">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 10pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLabel" name="label_11">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>поз.</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QSpinBox" name="spinBox_pos">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+              </property>
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLabel" name="label_12">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>протереть</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QComboBox" name="comboBox_detail_2">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 10pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>спиртом</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>уайт-спиритом</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_20">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page__svarka">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QListWidget" name="listWidget_svarka">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+/* ───────────── Сам список ───────────── */
+QListWidget {
+    background: transparent;
+    font-size: 10pt;
+	border: none;
+    color: #E8EAF0;
+}
+
+/* ───────────── Элементы ───────────── */
+QListWidget::item {
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    margin: 2px 6px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #FFFFFF;
+}
+
+QListWidget::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(94, 129, 255, 0.32),
+        stop:1 rgba(94, 129, 255, 0.08));
+    color: #FFFFFF;
+}
+
+QListWidget::item:selected:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(94, 129, 255, 0.42),
+        stop:1 rgba(94, 129, 255, 0.14));
+}
+
+/* убираем рамку/пунктир при фокусе */
+QListWidget:focus,
+QListWidget::item:focus {
+    outline: none;
+    border: none;
+}
+
+/* ───────────── Вертикальный скроллбар ───────────── */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 4px 2px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.18);
+    min-height: 30px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical { background: transparent; }
+
+/* ───────────── Горизонтальный скроллбар ───────────── */
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 2px 4px;
+    border-radius: 5px;
+}
+QScrollBar::handle:horizontal {
+    background: rgba(255, 255, 255, 0.18);
+    min-width: 30px;
+    border-radius: 5px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal { width: 0; }
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal { background: transparent; }
+</string>
+         </property>
+         <property name="tabKeyNavigation">
+          <bool>false</bool>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Установка / Снятие приспособления</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Зачистка деталей перед сваркой</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Обезжиривание деталей перед сваркой</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Зачистка сварных швов</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="text_svarka_3" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_24">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: none;</string>
+            </property>
+            <property name="text">
+             <string>Текст без параметров:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <property name="rightMargin">
+             <number>20</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_18">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_18">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>Зачистить сварные швы от цветов побежалости </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_19">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="text_svarka_1" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label_20">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: none;</string>
+            </property>
+            <property name="text">
+             <string>Укажите параметр:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <property name="rightMargin">
+             <number>20</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_position_type">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 10pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>Установить</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Снять</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>стягивающее приспособление</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="text_svarka_2" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLabel" name="label_19">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>Укажите параметры:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_zach" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout_10">
+               <item>
+                <layout class="QGridLayout" name="box_details_zach">
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_obez" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout_12">
+               <item>
+                <layout class="QGridLayout" name="box_details_obez">
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="bottomMargin">
+             <number>20</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QPushButton" name="pushButton_add_detail">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 5px;
+	height: 20px;
+	background-color: none;
+	padding: 2 5 2 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+              </property>
+              <property name="text">
+               <string>Добавить деталь</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QPushButton" name="pushButton_del_detail">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 5px;
+	height: 20px;
+	background-color: none;
+	padding: 2 5 2 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+              </property>
+              <property name="text">
+               <string>Удалить деталь</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_8">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: none;</string>
+            </property>
+            <property name="text">
+             <string>Ширина зачистки:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>от</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QSpinBox" name="spinBox_width_min">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+              </property>
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>до</string>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignmentFlag::AlignHCenter">
+             <widget class="QSpinBox" name="spinBox_width_max">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+              </property>
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>15</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: none;</string>
+              </property>
+              <property name="text">
+               <string>мм</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_meh">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QListWidget" name="listWidget_meh">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+/* ───────────── Сам список ───────────── */
+QListWidget {
+    background: transparent;
+    font-size: 10pt;
+	border: none;
+    color: #E8EAF0;
+}
+
+/* ───────────── Элементы ───────────── */
+QListWidget::item {
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    margin: 2px 6px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #FFFFFF;
+}
+
+QListWidget::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(94, 129, 255, 0.32),
+        stop:1 rgba(94, 129, 255, 0.08));
+    color: #FFFFFF;
+}
+
+QListWidget::item:selected:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(94, 129, 255, 0.42),
+        stop:1 rgba(94, 129, 255, 0.14));
+}
+
+/* убираем рамку/пунктир при фокусе */
+QListWidget:focus,
+QListWidget::item:focus {
+    outline: none;
+    border: none;
+}
+
+/* ───────────── Вертикальный скроллбар ───────────── */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 4px 2px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.18);
+    min-height: 30px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical { background: transparent; }
+
+/* ───────────── Горизонтальный скроллбар ───────────── */
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 2px 4px;
+    border-radius: 5px;
+}
+QScrollBar::handle:horizontal {
+    background: rgba(255, 255, 255, 0.18);
+    min-width: 30px;
+    border-radius: 5px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal { width: 0; }
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal { background: transparent; }
+</string>
+         </property>
+         <property name="tabKeyNavigation">
+          <bool>false</bool>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Обработка кромки</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
+        <widget class="QLabel" name="label_21">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: none;</string>
+         </property>
+         <property name="text">
+          <string>Укажите параметр:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="text_meh_1" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="topMargin">
+           <number>1</number>
+          </property>
+          <property name="bottomMargin">
+           <number>1</number>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: none;</string>
+            </property>
+            <property name="text">
+             <string>Острые кромки притупить фаской</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QDoubleSpinBox" name="doubleSpinBox_faska">
+            <property name="styleSheet">
+             <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+            </property>
+            <property name="decimals">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <double>10.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.500000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.500000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: none;</string>
+            </property>
+            <property name="text">
+             <string>х</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QSpinBox" name="spinBox_angle">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+            </property>
+            <property name="suffix">
+             <string>°</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="value">
+             <number>45</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QPushButton" name="pushButton_save_result">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;
+	width: 110px;
+	background-color: none;
+	padding: 2 5 2 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+     </property>
+     <property name="text">
+      <string>Добавить текст</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QPushButton" name="pushButton_close">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;
+	width: 110px;
+	background-color: rgba(247, 38, 38, 40);
+	padding: 2 5 2 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+     </property>
+     <property name="text">
+      <string>Закрыть окно</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,42 @@
+[
+    {
+        "операция": "Слесарная",
+        "кнопка": "logic/find_operations/sles_find.PNG"
+    },
+    {
+        "операция": "Термическая обработка",
+        "кнопка": "logic/find_operations/term_obr_find.PNG"
+    },
+    {
+        "операция": "Сборка",
+        "кнопка": "logic/find_operations/sborka_find.PNG"
+    },
+    {
+        "операция": "Испытания электрические",
+        "кнопка": "logic/find_operations/isp_elek_find.PNG"
+    },
+    {
+        "операция": "Контроль ОТК",
+        "кнопка": "logic/find_operations/control_otk_find.PNG"
+    },
+    {
+        "операция": "Сварка",
+        "кнопка": "logic/find_operations/svarka_find.PNG"
+    },
+    {
+        "операция": "Шпатлевание",
+        "кнопка": "logic/find_operations/shpatlevanie_find.PNG"
+    },
+    {
+        "операция": "Контроль неразрушающий капилярный",
+        "кнопка": "logic/find_operations/control_kapil_find.PNG"
+    },
+    {
+        "операция": "Маркирование",
+        "кнопка": "logic/find_operations/mark_find.PNG"
+    },
+    {
+        "операция": "Промывка",
+        "кнопка": "logic/find_operations/prom_find.PNG"
+    }
+]

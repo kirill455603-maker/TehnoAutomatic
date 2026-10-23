@@ -1,0 +1,3007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PageKontrolOtk</class>
+ <widget class="QWidget" name="PageKontrolOtk">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>913</width>
+    <height>1136</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Контроль ОТК</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: white;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(0, 57, 95), stop:1 rgb(0, 83, 122));
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item alignment="Qt::AlignmentFlag::AlignLeft">
+    <widget class="QPushButton" name="btn_home">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;
+	width: 100px;
+	background-color: none;
+	padding: 2 5 5 2;
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+     </property>
+     <property name="text">
+      <string>Домой</string>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QLabel" name="label_9">
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: none;
+</string>
+     </property>
+     <property name="text">
+      <string>Контроль ОТК</string>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QLabel" name="label_6">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: none;
+</string>
+     </property>
+     <property name="text">
+      <string>Что контролировать?</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_diameter">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 15px;
+	width: 120px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Диаметр</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_length">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 15px;
+	width: 120px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Длина</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_hole">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 15px;
+	width: 120px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Отверстия</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QPushButton" name="pushButton_reset">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 2px;
+	height: 20px;
+	width: 100px;
+	background-color: none;
+	padding: 2 5 2 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+     </property>
+     <property name="text">
+      <string>Сбросить</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="verticalWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background: none;</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="styleSheet">
+         <string notr="true">border: none;
+background: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="radioButton_otv">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 15px;
+	width: 120px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Отверстие</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="radioButton_val">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 15px;
+	width: 120px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Вал</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QCheckBox" name="checkBox_rezba">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox::indicator {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid white;         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: #FFFFFF;      
+}
+QCheckBox {
+	spacing: 15px; /* Расстояние между квадратиком и текстом */          
+	border: none;	
+	color: rgb(255, 255, 255) ;	
+	background: none;
+	font-size: 14px;
+	margin-right: 0px
+}
+QCheckBox::indicator:checked {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid white;         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(77, 77, 77);    
+}
+QCheckBox::indicator:hover {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid rgb(136, 136, 136);         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(77, 77, 77);         
+}
+QCheckBox::indicator:disabled {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid rgb(136, 136, 136);         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(86, 86, 86);         
+}</string>
+        </property>
+        <property name="text">
+         <string>Указать резьбу</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="rezba_holes_2" native="true">
+        <property name="styleSheet">
+         <string notr="true">background: none;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <property name="bottomMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_15">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QLabel" name="label_23">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Контролируемая резьба:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_rezba_d">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+           </property>
+           <property name="placeholderText">
+            <string>Резьба...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_13">
+           <property name="styleSheet">
+            <string notr="true">background: rgba(124, 124, 124, 40)</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item alignment="Qt::AlignmentFlag::AlignHCenter">
+              <widget class="QLabel" name="label_24">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Onyx</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: none</string>
+               </property>
+               <property name="text">
+                <string>Шаг  резьбы:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignmentFlag::AlignHCenter">
+              <widget class="QComboBox" name="comboBox_step_d">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+               </property>
+               <property name="placeholderText">
+                <string>Шаг...</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop">
+            <widget class="QLabel" name="label_25">
+             <property name="font">
+              <font>
+               <italic>false</italic>
+               <underline>false</underline>
+               <kerning>true</kerning>
+               <fontweight>Light</fontweight>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;asdasd&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: none;
+color: rgb(175, 175, 175)
+</string>
+             </property>
+             <property name="text">
+              <string>Первый шаг в списке - основной</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line_16">
+           <property name="styleSheet">
+            <string notr="true">background: rgba(124, 124, 124, 40)</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_26">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Onyx</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: none</string>
+           </property>
+           <property name="text">
+            <string>Допуск  резьбы:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_dopusk_2">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+           </property>
+           <property name="placeholderText">
+            <string>Допуск...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_16">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="styleSheet">
+         <string notr="true">background: none;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Контролируемый размер:</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_nom_diameter">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="prefix">
+            <string>Ø </string>
+           </property>
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="stepType">
+            <enum>QAbstractSpinBox::StepType::DefaultStepType</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line">
+           <property name="styleSheet">
+            <string notr="true">background: rgba(124, 124, 124, 40)</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Квалитет:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_kvalitet">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">padding: 5, 5, 5, 5;
+border: none;
+border-bottom: 1px solid white;
+background: rgba(255, 255, 255, 0);
+transition: color 0.3s ease;
+transition: border-bottom 0.4s ease;
+color: rgb(204, 204, 204);
+font-size: 10pt;</string>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_2">
+           <property name="styleSheet">
+            <string notr="true">background: rgba(124, 124, 124, 40)</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Допуск 1:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_dopusk_1">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="prefix">
+            <string/>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>-10.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_4">
+           <property name="styleSheet">
+            <string notr="true">background: rgba(124, 124, 124, 40)</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Допуск 2:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_dopusk_2">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="prefix">
+            <string/>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>-10.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="holes" native="true">
+     <property name="styleSheet">
+      <string notr="true">background: none;</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>20</number>
+      </property>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="styleSheet">
+         <string notr="true">border: none;
+background: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="btn_gladkie">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 15px;
+	width: 120px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Гладкие</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_rezba">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	border: none;
+	background: rgba(154, 154, 154, 60);
+	padding: 5 5 5 5;
+	height: 15px;
+	width: 120px;
+	border-radius:  0;
+}
+
+QPushButton:hover {
+	background: rgba(11, 31, 139,30);
+	border-bottom: 1px solid rgba(255, 255, 255, 20);
+	
+}
+
+QPushButton:checked {
+	background: rgba(11, 31, 139,90);
+	border-bottom: 1px solid white;
+	
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Резьбовые</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="gladkie_holes" native="true">
+          <property name="styleSheet">
+           <string notr="true">background: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="leftMargin">
+            <number>1</number>
+           </property>
+           <property name="topMargin">
+            <number>1</number>
+           </property>
+           <property name="rightMargin">
+            <number>1</number>
+           </property>
+           <property name="bottomMargin">
+            <number>1</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter">
+            <widget class="QLabel" name="label_3">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Контролируемый размер:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_nom_diameter_3">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string>Ø </string>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="stepType">
+              <enum>QAbstractSpinBox::StepType::DefaultStepType</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_5">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Квалитет:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_kvalitet_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">padding: 5, 5, 5, 5;
+border: none;
+border-bottom: 1px solid white;
+background: rgba(255, 255, 255, 0);
+transition: color 0.3s ease;
+transition: border-bottom 0.4s ease;
+color: rgb(204, 204, 204);
+font-size: 10pt;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_6">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Допуск 1:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_dopusk_3">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string/>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>-10.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_7">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Допуск 2:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_dopusk_4">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string/>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>-10.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="rezba_holes" native="true">
+          <property name="styleSheet">
+           <string notr="true">background: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <property name="leftMargin">
+            <number>1</number>
+           </property>
+           <property name="topMargin">
+            <number>1</number>
+           </property>
+           <property name="rightMargin">
+            <number>1</number>
+           </property>
+           <property name="bottomMargin">
+            <number>1</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter">
+            <widget class="QLabel" name="label_17">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Контролируемая резьба:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_diameter">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+             </property>
+             <property name="placeholderText">
+              <string>Резьба...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_11">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                <widget class="QLabel" name="label_18">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Onyx</family>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: none</string>
+                 </property>
+                 <property name="text">
+                  <string>Шаг  резьбы:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignmentFlag::AlignHCenter">
+                <widget class="QComboBox" name="comboBox_diameter_2">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="toolTip">
+                  <string/>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Шаг...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop">
+              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <italic>false</italic>
+                 <underline>false</underline>
+                 <kerning>true</kerning>
+                 <fontweight>Light</fontweight>
+                </font>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;asdasd&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: none;
+color: rgb(175, 175, 175)
+</string>
+               </property>
+               <property name="text">
+                <string>Первый шаг в списке - основной</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="Line" name="line_12">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Onyx</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: none</string>
+             </property>
+             <property name="text">
+              <string>Допуск  резьбы:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_dopusk">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+             </property>
+             <property name="placeholderText">
+              <string>Допуск...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="gladkie_holes_2" native="true">
+          <property name="styleSheet">
+           <string notr="true">background: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <property name="leftMargin">
+            <number>1</number>
+           </property>
+           <property name="topMargin">
+            <number>1</number>
+           </property>
+           <property name="rightMargin">
+            <number>1</number>
+           </property>
+           <property name="bottomMargin">
+            <number>1</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter">
+            <widget class="QLabel" name="label_16">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Количество отверстий: </string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter">
+            <widget class="QSpinBox" name="spinBox_count">
+             <property name="styleSheet">
+              <string notr="true">QSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="suffix">
+              <string> шт.</string>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QCheckBox" name="checkBox_add_length">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox::indicator {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid white;         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: #FFFFFF;      
+}
+QCheckBox {
+	spacing: 15px; /* Расстояние между квадратиком и текстом */          
+	border: none;	
+	color: rgb(255, 255, 255) ;	
+	background: none;
+	font-size: 14px;
+	margin-right: 0px
+}
+QCheckBox::indicator:checked {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid white;         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(77, 77, 77);    
+}
+QCheckBox::indicator:hover {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid rgb(136, 136, 136);         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(77, 77, 77);         
+}
+QCheckBox::indicator:disabled {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid rgb(136, 136, 136);         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(86, 86, 86);         
+}</string>
+          </property>
+          <property name="text">
+           <string>Указать глубину отверстий</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="length" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="bottomMargin">
+            <number>1</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter">
+            <widget class="QLabel" name="label_4">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Глубина из под сверла:</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_length">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string>L= </string>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="stepType">
+              <enum>QAbstractSpinBox::StepType::DefaultStepType</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_10">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Квалитет:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_kvalitet_length">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">padding: 5, 5, 5, 5;
+border: none;
+border-bottom: 1px solid white;
+background: rgba(255, 255, 255, 0);
+transition: color 0.3s ease;
+transition: border-bottom 0.4s ease;
+color: rgb(204, 204, 204);
+font-size: 10pt;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_9">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Допуск 1:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_dopusk_length">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string/>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>-10.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Допуск 2:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_8">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_dopusk_length_2">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string/>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>-10.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_2" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Глубина резьбы:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_length_rezba">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string>L= </string>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="stepType">
+              <enum>QAbstractSpinBox::StepType::DefaultStepType</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_14">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_22">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Допуск 1:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_dopusk_length_rezba">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string/>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>-10.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_15">
+             <property name="styleSheet">
+              <string notr="true">background: rgba(124, 124, 124, 40)</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: none;
+</string>
+             </property>
+             <property name="text">
+              <string>Допуск 2:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_dopusk_length_rezba_2">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QDoubleSpinBox {
+	padding: 2 5 2 5;	
+	border: none;
+	border-bottom: 1px solid white;
+	border-radius: 1px;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt
+}
+
+QDoubleSpinBox:disabled {
+	color: rgb(120, 106, 107);
+	background: rgba(255, 255, 255, 20);
+}
+
+QDoubleSpinBox:hover {
+	color: rgb(255, 255, 255)
+}
+
+QDoubleSpinBox:pressed {
+	border-bottom: 1px solid white;
+}
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="prefix">
+              <string/>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>-10.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>10.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QPushButton" name="pushButton_add_table">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 25px;
+	background-color: none;
+	padding: 2 5 5 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+     </property>
+     <property name="text">
+      <string>Добавить в таблицу</string>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QLabel" name="text_info">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: none;
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignRight">
+    <widget class="QPushButton" name="btn_clear_table">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;
+	width: 110px;
+	background-color: none;
+	padding: 2 5 2 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+     </property>
+     <property name="text">
+      <string>Очистить таблицу</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_widget_kontrol_otk">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Сам виджет — прозрачный фон */
+QTableWidget {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    gridline-color: rgba(255, 255, 255, 0.15);
+    selection-background-color: rgba(255, 255, 255, 0.25);
+    selection-color: #ffffff;
+}
+
+/* Ячейки — без фона, белый текст */
+QTableWidget::item {
+    background: transparent;
+    color: #ffffff;
+    padding: 4px 6px;
+    border: none;
+	border-left: 1px solid rgba(255, 255, 255, 0.15);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+
+}
+
+QTableWidget::item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+QTableWidget::item:selected {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Заголовки — ЕДИНСТВЕННОЕ место с фоном */
+QHeaderView::section {
+    background-color: rgb(21, 69, 140);
+    color: #ffffff;
+    padding: 6px 8px;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+QHeaderView::section:hover {
+    background-color: #3a3a3a;
+}
+
+/* Угловая кнопка (пересечение заголовков) */
+QTableCornerButton::section {
+    background-color:  rgb(21, 69, 140);
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Скроллбары — минимально, чтобы не мешали */
+QTableWidget QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+}
+
+QTableWidget QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical,
+QTableWidget QScrollBar::add-page:vertical,
+QTableWidget QScrollBar::sub-page:vertical {
+    background: transparent;
+    height: 0px;
+}
+
+QTableWidget QScrollBar:horizontal {
+    background: transparent;
+    height: 8px;
+}
+
+QTableWidget QScrollBar::handle:horizontal {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QTableWidget QScrollBar::handle:horizontal:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+QTableWidget QScrollBar::add-line:horizontal,
+QTableWidget QScrollBar::sub-line:horizontal,
+QTableWidget QScrollBar::add-page:horizontal,
+QTableWidget QScrollBar::sub-page:horizontal {
+    background: transparent;
+    width: 0px;
+}
+QPushButton {
+	border: 1px solid white;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 8px;
+}
+QPushButton:hover {
+	border: 2px solid white;
+	background: rgb(15, 65, 159)
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="autoScroll">
+      <bool>false</bool>
+     </property>
+     <property name="showGrid">
+      <bool>true</bool>
+     </property>
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <property name="columnCount">
+      <number>3</number>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Инструмент</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Размеры</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QPushButton" name="btn_save_and_export">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;	
+	background-color: rgb(185, 57, 41);
+	padding: 2 5 5 5;
+	font-size: 11pt;
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+     </property>
+     <property name="text">
+      <string>Перенести переходы в ТехноПро</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

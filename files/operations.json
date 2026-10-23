@@ -1,0 +1,432 @@
+[
+    {
+        "операция": "Входной контроль",
+        "кнопка": "logic/find_operations/otk_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-044",
+            "изображение_иот": "logic/find_operations/otk_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Стол ОТК",
+                "logic/find_operations/otk_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Комплектование",
+        "кнопка": "logic/find_operations/komplekt_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-014",
+            "изображение_иот": "logic/find_operations/komplekt_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Стол комплектовщика",
+                "logic/find_operations/komplekt_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Сборка",
+        "кнопка": "logic/find_operations/sborka_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-014",
+            "изображение_иот": "logic/find_operations/sborka_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Д75200, Верстак слесарный",
+                "logic/find_operations/sborka_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Сварка",
+        "кнопка": "logic/find_operations/svarka_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-024",
+            "изображение_иот": "logic/find_operations/svarka_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Cварочный аргонодуговой аппарат, Evotig 500 P AC/DC",
+                "logic/find_operations/svarka_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Отрезная",
+        "кнопка": "logic/find_operations/cut_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-007",
+            "изображение_иот": "logic/find_operations/cut_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Ленточнопильный станок, S-350",
+                "logic/find_operations/cut_el.PNG"
+            ],
+            [
+                "Б Ленточнопильный станок, BS500CH",
+                "logic/find_operations/cut_el_2.PNG"
+            ],
+            [
+                "Б Ленточнопильный станок, Н-400",
+                "logic/find_operations/cut_el_3.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Токарная",
+        "кнопка": "logic/find_operations/tok_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-001",
+            "изображение_иот": "logic/find_operations/tok_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Токарно-винторезный станок, 16К20",
+                "logic/find_operations/tok_el.PNG"
+            ],
+            [
+                "Б Токарно-винторезный станок, 1М63Б",
+                "logic/find_operations/tok_el_2.PNG"
+            ],
+            [
+                "Б Токарно-винторезный станок, 16К40Ф101",
+                "logic/find_operations/tok_el_3.PNG"
+            ],
+            [
+                "Б Токарно-винторезный станок, 1М65Б",
+                "logic/find_operations/tok_el_4.PNG"
+            ],
+            [
+                "Б Токарно-карусельный станок, 1512",
+                "logic/find_operations/tok_el_5.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Токарно-карусельная",
+        "кнопка": "logic/find_operations/tok_kar_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-001",
+            "изображение_иот": "logic/find_operations/tok_kar_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Токарно-карусельный станок, 1512",
+                "logic/find_operations/tok_kar_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Токарная с ЧПУ",
+        "кнопка": "logic/find_operations/tok_cpu_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-016",
+            "изображение_иот": "logic/find_operations/tok_cpu_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Токарный станок с ЧПУ, SMEC PL 40",
+                "logic/find_operations/tok_cpu_el.PNG"
+            ]
+        ]
+    },
+    {
+        "операция": "Фрезерная с ЧПУ",
+        "кнопка": "logic/find_operations/frez_cpu_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-016",
+            "изображение_иот": "logic/find_operations/frez_cpu_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Фрезерный станок с ЧПУ, LCV500",
+                "logic/find_operations/frez_cpu_el.PNG"
+            ]
+        ]
+    },
+    {
+        "операция": "Разметка",
+        "кнопка": "logic/find_operations/razmetka_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-014",
+            "изображение_иот": "logic/find_operations/sles_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Плита 1-0-2500х1600 ГОСТ 10905-86",
+                "logic/find_operations/razmetka_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Сверлильная",
+        "кнопка": "logic/find_operations/sverl_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-012",
+            "изображение_иот": "logic/find_operations/sverl_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Радиально-сверлильный станок, 2А554",
+                "logic/find_operations/sverl_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Радиально-сверлильная",
+        "кнопка": "logic/find_operations/rsverl_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-012",
+            "изображение_иот": "logic/find_operations/rsverl_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Радиально-сверлильный станок, 2А554",
+                "logic/find_operations/rsverl_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Координатно-расточная",
+        "кнопка": "logic/find_operations/coord_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-006",
+            "изображение_иот": "logic/find_operations/coord_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Координатно-расточной станок, 2В440А",
+                "logic/find_operations/coord_el.PNG"
+            ]
+        ]
+    },
+    {
+        "операция": "Фрезерная",
+        "кнопка": "logic/find_operations/frez_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-005",
+            "изображение_иот": "logic/find_operations/frez_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Вертикально-фрезерный станок, 6Р12",
+                "logic/find_operations/frez_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Электроэрозионная проволочным электродом",
+        "кнопка": "logic/find_operations/eros_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-016",
+            "изображение_иот": "logic/find_operations/eros_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Проволочно-электроэрозионный станок, AR2300",
+                "logic/find_operations/eros_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Шлифовальная",
+        "кнопка": "logic/find_operations/shlif_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-013",
+            "изображение_иот": "logic/find_operations/shlif_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Универсальный кругло-шлифовальный станок, МЕ1450",
+                "logic/find_operations/shlif_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Слесарная",
+        "кнопка": "logic/find_operations/sles_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-014",
+            "изображение_иот": "logic/find_operations/sles_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Верстак",
+                "logic/find_operations/sles_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Промывка",
+        "кнопка": "logic/find_operations/prom_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-073",
+            "изображение_иот": "logic/find_operations/prom_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Моечная машина, Сивер РП",
+                "logic/find_operations/prom_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Маркирование",
+        "кнопка": "logic/find_operations/mark_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-014",
+            "изображение_иот": "logic/find_operations/mark_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Верстак",
+                "logic/find_operations/sles_el.PNG"
+            ],
+            [
+                "Б Рабочее место слесаря-сборщика",
+                "logic/find_operations/mark_el_2.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Контроль ОТК",
+        "кнопка": "logic/find_operations/control_otk_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-044",
+            "изображение_иот": "logic/find_operations/otk_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Стол ОТК",
+                "logic/find_operations/otk_el.PNG"
+            ]
+        ]
+    },
+    {
+        "операция": "Горизонтально-расточная",
+        "кнопка": "logic/find_operations/gor_ras_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-006",
+            "изображение_иот": "logic/find_operations/gor_ras_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Горизонтально-расточной станок, FK 110",
+                "logic/find_operations/gor_ras_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Испытания на герметичность гелиевым течеискателем",
+        "кнопка": "logic/find_operations/gel_tech_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-036",
+            "изображение_иот": "logic/find_operations/gel_tech_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Течеискатель масс-спектрометрический гелиевый ТИ1-50И",
+                "logic/find_operations/gel_tech_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Контроль неразрушающий капиллярный",
+        "кнопка": "logic/find_operations/control_kapil_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-044",
+            "изображение_иот": "logic/find_operations/control_kapil_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Стол ОТК",
+                "logic/find_operations/control_kapil_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Перемещение",
+        "кнопка": "logic/find_operations/moving.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-040",
+            "изображение_иот": "logic/find_operations/moving_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Гидравлическая тележка Тоr",
+                "logic/find_operations/moving_el.PNG"
+            ],
+            [
+                "Б Ручной гидравлический штабелер PROLIFT SDF 1016, грузоподъемностью 1000 кг",
+                "logic/find_operations/moving_el_2.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Испытания на герметичность гидравлические",
+        "кнопка": "logic/find_operations/ger_gidr_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-042",
+            "изображение_иот": "logic/find_operations/ger_gidr_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Стенд участка гидроиспытаний. Приборы участка гидроиспытаний.",
+                "logic/find_operations/ger_gidr_el.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    },
+    {
+        "операция": "Термическая обработка",
+        "кнопка": "logic/find_operations/term_obr_find.PNG",
+        "иот": {
+            "текст_иот": "Ш ИОТ-0601-12-026",
+            "изображение_иот": "logic/find_operations/term_obr_iot.PNG"
+        },
+        "оборудование": [
+            [
+                "Б Электрическая печь СНОЛ 1000/12",
+                "logic/find_operations/term_obr_el_2.PNG"
+            ],
+            [
+                "Б Электрическая печь СНОЛ 200/12",
+                "logic/find_operations/term_obr_el.PNG"
+            ],
+            [
+                "Б Электрическая печь СНОЛ 120/12",
+                "logic/find_operations/term_obr_el_3.PNG"
+            ],
+            [
+                "Б Электрическая печь СНОЛ 40/12",
+                "logic/find_operations/term_obr_el_4.PNG"
+            ]
+        ],
+        "оборудование_полученное": null
+    }
+]

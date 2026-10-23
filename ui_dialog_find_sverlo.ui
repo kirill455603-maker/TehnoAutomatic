@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FindSverlo</class>
+ <widget class="QDialog" name="FindSverlo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Подбор сверла</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: white;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(0, 57, 95), stop:1 rgb(0, 83, 122))</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: none;
+
+</string>
+     </property>
+     <property name="text">
+      <string>Подбор сверла</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item alignment="Qt::AlignmentFlag::AlignHCenter">
+      <widget class="QComboBox" name="comboBox_diameter">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Резьба...</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignmentFlag::AlignHCenter">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background-color: none;
+</string>
+       </property>
+       <property name="text">
+        <string>х</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_step">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+	padding: 5, 5, 5, 5;
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid white;
+	background: rgba(255, 255, 255, 0);
+	transition: color 0.3s ease;
+	transition: border-bottom 0.4s ease;
+	color: rgb(204, 204, 204);
+	font-size: 11pt;
+}
+QComboBox:hover {
+   color: rgb(167, 167, 167);
+}
+
+QComboBox::item {
+	background: rgb(67, 67, 67);
+	border-radius: none;
+}
+
+QComboBox QAbstractItemView {
+	border-radius: none;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(58, 58, 58), stop:1 rgb(88, 88, 88));
+	selection-border-radius: none;
+	selection-border: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+QComboBox QAbstractItemView::item {
+    min-height: 15px;
+	width: 15px;
+	border: none;
+	border-radius: none;
+}
+QComboBox QAbstractItemView::item:hover {
+	color:rgb(173, 173, 173);
+	border-bottom: 1px solid white;
+}
+
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Шаг...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QLabel" name="label_3">
+     <property name="styleSheet">
+      <string notr="true">background: none;
+color: rgba(255, 255, 255, 99)</string>
+     </property>
+     <property name="text">
+      <string>Подсказка: Первый ШАГ в списке - ОСНОВНОЙ</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QLabel" name="label_text">
+     <property name="styleSheet">
+      <string notr="true">background: none;
+color: rgb(254, 95, 32)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_save">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;
+	background-color: none;
+	padding: 2 10 5 10;
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+     </property>
+     <property name="text">
+      <string>Подобрать</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

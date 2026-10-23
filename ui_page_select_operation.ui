@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PageSelectOperation</class>
+ <widget class="QWidget" name="PageSelectOperation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>839</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: white;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(20, 40, 80, 255), stop:1 rgba(39, 73, 109, 255));
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="verticalWidget_2" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(20, 40, 80, 255), stop:1 rgba(39, 73, 109, 255));
+</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <item alignment="Qt::AlignmentFlag::AlignLeft">
+         <widget class="QPushButton" name="pushButton">
+          <property name="styleSheet">
+           <string notr="true">background: rgba(0, 0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="res/res.qrc">
+            <normaloff>:/icons/logo_cut.png</normaloff>:/icons/logo_cut.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignRight">
+         <widget class="QPushButton" name="btn_predlog">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(12, 123, 147, 255), stop:1 rgba(0, 168, 204, 255));
+	border: none;
+	height: 30px;	
+	width: 250px;
+	font-size: 17px;
+	padding: 5 0 5 0;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border: 1px solid qradialgradient(spread:pad, cx:0.506, cy:1, radius:1.147, fx:0.494318, fy:1, stop:0 rgba(12, 123, 147, 255), stop:1 rgba(255, 255, 255, 0));
+}
+QPushButton:hover {
+	color: rgb(0, 168, 204);
+	border-left: 1px solid rgb(10, 169, 255);
+	border-right: 1px solid rgb(10, 169, 255);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(15, 109, 159, 64), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(15, 112, 139, 58));
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+          </property>
+          <property name="text">
+           <string>Предложения по улучшению</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>3</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI Black</family>
+            <pointsize>-1</pointsize>
+            <fontweight>DemiBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: none;
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(12, 123, 147, 255), stop:1 rgba(0, 168, 204, 255));
+font-size: 28px;
+font-weight: 600;
+border: none;
+width: 300px;
+
+</string>
+          </property>
+          <property name="text">
+           <string>ГЛАВНАЯ СТРАНИЦА</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QLabel" name="label_select">
+          <property name="font">
+           <font>
+            <family>Onyx</family>
+            <pointsize>-1</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: none;
+color: rgb(203, 203, 203);
+font-size: 15px;
+font-weight: 400;
+border: none</string>
+          </property>
+          <property name="text">
+           <string>Выберите операцию для заполнения переходов</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">background: none;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>40</number>
+          </property>
+          <property name="rightMargin">
+           <number>40</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true"/>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="styleSheet">
+             <string notr="true">QScrollArea {
+	border: none;
+	background: rgba(0, 0, 0, 0);
+}</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>912</width>
+               <height>557</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background: rgba(0, 0, 0, 0);</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame">
+                <property name="styleSheet">
+                 <string notr="true">QWidget {
+	background: none;
+}
+QPushButton {
+	background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(12, 123, 147, 255), stop:1 rgba(0, 168, 204, 255));
+	border: none;
+	height: 30px;	
+	width: 300px;
+	font-size: 17px;
+	padding: 5 0 5 40;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border: 1px solid qradialgradient(spread:pad, cx:0.506, cy:1, radius:1.147, fx:0.494318, fy:1, stop:0 rgba(12, 123, 147, 255), stop:1 rgba(255, 255, 255, 0));
+	text-align: left;
+}
+QPushButton:hover {
+	color: rgb(0, 168, 204);
+	border-left: 1px solid rgb(10, 169, 255);
+	border-right: 1px solid rgb(10, 169, 255);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(15, 109, 159, 64), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(15, 112, 139, 58));
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}
+QPushButton:disabled {
+	background:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.851, fx:0.5, fy:0.5, stop:0 rgba(60, 60, 60, 255), stop:1 rgba(89, 89, 89, 255));
+	border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(89, 89, 89, 255), stop:1 rgba(111, 111, 111, 255))
+}</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>1</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>1</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>1</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>2</number>
+                   </property>
+                   <item row="9" column="0">
+                    <widget class="QPushButton" name="btn_sborka">
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">text-align: none;
+padding-left: 0;
+padding-right: 160;</string>
+                     </property>
+                     <property name="text">
+                      <string>ПРОЧИЕ ОПЕРАЦИИ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/sborka-no-bg.png</normaloff>:/operations/operations/sborka-no-bg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>160</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QPushButton" name="btn_shlifovanie">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>ШЛИФОВАЛЬНАЯ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/shlifovka.PNG</normaloff>:/operations/operations/shlifovka.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>45</width>
+                       <height>45</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QPushButton" name="btn_kontrol_otk_5">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string> СВАРКА</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/svarka.PNG</normaloff>:/operations/operations/svarka.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>70</width>
+                       <height>70</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QPushButton" name="btn_kontrol_otk">
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>        КОНТРОЛЬ ОТК</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/otk-no-bg.png</normaloff>:/operations/operations/otk-no-bg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>50</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QPushButton" name="btn_tokarnaya">
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LayoutDirection::LeftToRight</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string> ТОКАРНАЯ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/tokarnaya-no-bg.png</normaloff>:/operations/operations/tokarnaya-no-bg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>70</width>
+                       <height>70</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="1">
+                    <widget class="QPushButton" name="btn_kontrol_otk_10">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>    ТЕРМООБРАБОТКА</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/term_obrabotka.PNG</normaloff>:/operations/operations/term_obrabotka.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>55</width>
+                       <height>55</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QPushButton" name="btn_sverlilnaya">
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>     СВЕРЛИЛЬНАЯ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/sverlovka-no-bg.png</normaloff>:/operations/operations/sverlovka-no-bg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>60</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QPushButton" name="btn_kontrol_otk_2">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>     ГИДРАВЛИЧЕСКИЕ ИСПЫТАНИЯ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/hydro_ispit.PNG</normaloff>:/operations/operations/hydro_ispit.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>50</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="1">
+                    <widget class="QPushButton" name="btn_kontrol_otk_8">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string> ЭЛЕКТРИЧЕСКИЕ ИСПЫТАНИЯ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/elect_ispit.PNG</normaloff>:/operations/operations/elect_ispit.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>70</width>
+                       <height>70</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="0">
+                    <widget class="QPushButton" name="btn_kontrol_otk_12">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>СЛЕСАРНАЯ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/slesarnaya.PNG</normaloff>:/operations/operations/slesarnaya.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>55</width>
+                       <height>55</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="1">
+                    <widget class="QPushButton" name="btn_kontrol_otk_7">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string> ИСПЫТАНИЯ НА ГЕРМЕТИЧНОСТЬ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/gel_ispit.PNG</normaloff>:/operations/operations/gel_ispit.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>70</width>
+                       <height>70</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QPushButton" name="btn_razmetka_2">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt; color:#000000;&quot;&gt;В разработке&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="whatsThis">
+                      <string/>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string> ГОРИЗОНТАЛЬНО-РАСТОЧНАЯ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/goriz-no-bg.png</normaloff>:/operations/operations/goriz-no-bg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>70</width>
+                       <height>70</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="8" column="1">
+                    <widget class="QPushButton" name="btn_kontrol_otk_4">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>     ОКРАШИВАНИЕ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/painting.PNG</normaloff>:/operations/operations/painting.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>50</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="9" column="1">
+                    <widget class="QPushButton" name="btn_kontrol_otk_6">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>     БАЛАНСИРОВКА</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/balance.PNG</normaloff>:/operations/operations/balance.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>60</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QPushButton" name="btn_kontrol_otk_9">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>       СБОРКА</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/sborka.PNG</normaloff>:/operations/operations/sborka.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>50</width>
+                       <height>35</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="btn_frezernaya">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                       <strikeout>false</strikeout>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt; color:#000000;&quot;&gt;В разработке&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>      ФРЕЗЕРНАЯ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/frezernaya-no-bg.png</normaloff>:/operations/operations/frezernaya-no-bg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>60</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QPushButton" name="btn_razmetka">
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>  РАЗМЕТКА</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/razmetka-no-bg.png</normaloff>:/operations/operations/razmetka-no-bg.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>70</width>
+                       <height>70</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QPushButton" name="btn_kontrol_otk_11">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>     ШПАТЛЕВАНИЕ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/shpatlevanie.PNG</normaloff>:/operations/operations/shpatlevanie.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>55</width>
+                       <height>55</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="8" column="0">
+                    <widget class="QPushButton" name="btn_markirovanie">
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>МАРКИРОВАНИЕ</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/markirovanie.PNG</normaloff>:/operations/operations/markirovanie.PNG</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>55</width>
+                       <height>55</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0">
+                    <widget class="QPushButton" name="btn_kontrol_otk_3">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI Light</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ForbiddenCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton:hover {
+	color: rgb(221, 71, 71);
+	border-left: 1px solid rgb(203, 88, 88);
+	border-right: 1px solid rgb(203, 88, 88);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(160, 18, 18, 58), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(160, 17, 17, 58))
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>     ПРОМЫВКА</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res/res.qrc">
+                       <normaloff>:/operations/operations/promivka-no-bg-preview (carve.photos).png</normaloff>:/operations/operations/promivka-no-bg-preview (carve.photos).png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>50</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <property name="styleSheet">
+             <string notr="true">QWidget {
+	background: none;
+}
+QPushButton {
+	background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(12, 123, 147, 255), stop:1 rgba(0, 168, 204, 255));
+	border: none;
+	height: 30px;	
+	width: 400px;
+	font-size: 17px;
+	padding: 5 0 5 0;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	border: 1px solid qradialgradient(spread:pad, cx:0.506, cy:1, radius:1.147, fx:0.494318, fy:1, stop:0 rgba(12, 123, 147, 255), stop:1 rgba(255, 255, 255, 0));
+}
+QPushButton:hover {
+	color: rgb(0, 168, 204);
+	border-left: 1px solid rgb(10, 169, 255);
+	border-right: 1px solid rgb(10, 169, 255);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.477, x2:1, y2:0.518, stop:0 rgba(15, 109, 159, 64), stop:0.505682 rgba(15, 111, 149, 0), stop:1 rgba(15, 112, 139, 58));
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="Line" name="line">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignmentFlag::AlignHCenter">
+              <widget class="QPushButton" name="btn_tehno_iot">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Light</family>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Добавление к операции ИОТ и оборудование</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignmentFlag::AlignHCenter">
+              <widget class="QPushButton" name="btn_normirovanie">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Light</family>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Нормирование</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="res/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,22 @@
+from ui_page_markirovanie import Ui_PageMarkirovanie #Поменять на свою
+from PySide6.QtCore import Signal
+from PySide6.QtWidgets import QWidget
+class PageMarkirovanie(QWidget): #Назвать свой класс
+    btn_save_clicked = Signal()
+    btn_home_clicked = Signal()
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ui = Ui_PageMarkirovanie()
+        self.ui.setupUi(self)
+
+        self.ui.pushButton_save.clicked.connect(self._on_button_save_result)
+        self.ui.btn_home.clicked.connect(self._on_button_home_clicked)
+
+    def _on_button_save_result(self):
+        self.btn_save_clicked.emit()
+
+    def _on_button_home_clicked(self):
+        self.btn_home_clicked.emit()
+
+    def show_label(self, text):
+        self.ui.label_error.setText(text)

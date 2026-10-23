@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PageSborka</class>
+ <widget class="QWidget" name="PageSborka">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>737</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Прочие операции</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: white;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(0, 57, 95), stop:1 rgb(0, 83, 122))</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <property name="leftMargin">
+      <number>5</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>5</number>
+     </property>
+     <item alignment="Qt::AlignmentFlag::AlignLeft">
+      <widget class="QPushButton" name="btn_home_1">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;
+	width: 100px;
+	background-color: none;
+	padding: 2 5 5 2;
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+       </property>
+       <property name="text">
+        <string>Домой</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>2</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgb(11, 59, 103)</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QCheckBox" name="checkBox_only_find">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox::indicator {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid white;         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: #FFFFFF;      
+}
+QCheckBox {
+	spacing: 15px; /* Расстояние между квадратиком и текстом */          
+	border: none;	
+	color: rgb(255, 255, 255) ;	
+	background: none;
+	font-size: 14px;
+	margin-right: 0px
+}
+QCheckBox::indicator:checked {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid white;         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(77, 77, 77);    
+}
+QCheckBox::indicator:hover {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid rgb(136, 136, 136);         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(77, 77, 77);         
+}
+QCheckBox::indicator:disabled {
+  width: 10px;          
+  height: 10px;         
+  border: 2px solid rgb(136, 136, 136);         
+  border-radius: 2px; /* Скругленные углы */          
+  background-color: rgb(86, 86, 86);         
+}</string>
+          </property>
+          <property name="text">
+           <string>Только найденные в ТехноПро</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget_operations">
+          <property name="styleSheet">
+           <string notr="true">/* Сам виджет — прозрачный фон */
+QTableWidget {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 80);
+	gridline-color: rgba(255, 255, 255, 0);
+    selection-background-color: rgba(255, 255, 255, 0);
+    selection-color: #ffffff;
+}
+
+/* Ячейки — без фона, белый текст */
+QTableWidget::item {
+    background: transparent;
+    border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.36)
+
+}
+
+QTableWidget::item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+QTableWidget::item:selected {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Заголовки — ЕДИНСТВЕННОЕ место с фоном */
+QHeaderView::section {
+    background-color: rgb(21, 69, 140);
+    color: #ffffff;
+    padding: 6px 8px;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+QHeaderView::section:hover {
+    background-color: #3a3a3a;
+}
+
+/* Угловая кнопка (пересечение заголовков) */
+QTableCornerButton::section {
+    background-color:  rgb(21, 69, 140);
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Скроллбары — минимально, чтобы не мешали */
+QTableWidget QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+}
+
+QTableWidget QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical,
+QTableWidget QScrollBar::add-page:vertical,
+QTableWidget QScrollBar::sub-page:vertical {
+    background: transparent;
+    height: 0px;
+}
+
+QTableWidget QScrollBar:horizontal {
+    background: transparent;
+    height: 8px;
+}
+
+QTableWidget QScrollBar::handle:horizontal {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QTableWidget QScrollBar::handle:horizontal:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+QTableWidget QScrollBar::add-line:horizontal,
+QTableWidget QScrollBar::sub-line:horizontal,
+QTableWidget QScrollBar::add-page:horizontal,
+QTableWidget QScrollBar::sub-page:horizontal {
+    background: transparent;
+    width: 0px;
+}
+QPushButton {
+	border: 1px solid white;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 8px;
+}
+QPushButton:hover {
+	border: 2px solid white;
+	background: rgb(15, 65, 159)
+}</string>
+          </property>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>100</number>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>130</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderMinimumSectionSize">
+           <number>30</number>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>30</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Операции</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>4</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgba(255, 255, 255, 0)</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>1. Выберите, к какой операции по счету вы хотите добавить переход</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="styleSheet">
+           <string notr="true">background: rgb(255, 255, 255)</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QPushButton" name="btn_update_table">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;
+	background-color: none;
+	padding: 2 5 2 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+          </property>
+          <property name="text">
+           <string>Обновить список операций</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QTableWidget" name="tableWidget_find_operations">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>2</horstretch>
+            <verstretch>2</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/* Сам виджет — прозрачный фон */
+QTableWidget {
+    background: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+	gridline-color: rgba(255, 255, 255, 0);
+    selection-background-color: rgba(255, 255, 255, 0);
+    selection-color: #ffffff;
+}
+
+/* Ячейки — без фона, белый текст */
+QTableWidget::item {
+    background: transparent;
+    border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.36)
+
+}
+
+QTableWidget::item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+QTableWidget::item:selected {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Заголовки — ЕДИНСТВЕННОЕ место с фоном */
+QHeaderView::section {
+    background-color: rgb(21, 69, 140);
+    color: #ffffff;
+    padding: 6px 8px;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+QHeaderView::section:hover {
+    background-color: #3a3a3a;
+}
+
+/* Угловая кнопка (пересечение заголовков) */
+QTableCornerButton::section {
+    background-color:  rgb(21, 69, 140);
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Скроллбары — минимально, чтобы не мешали */
+QTableWidget QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+}
+
+QTableWidget QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical,
+QTableWidget QScrollBar::add-page:vertical,
+QTableWidget QScrollBar::sub-page:vertical {
+    background: transparent;
+    height: 0px;
+}
+
+QTableWidget QScrollBar:horizontal {
+    background: transparent;
+    height: 8px;
+}
+
+QTableWidget QScrollBar::handle:horizontal {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QTableWidget QScrollBar::handle:horizontal:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+QTableWidget QScrollBar::add-line:horizontal,
+QTableWidget QScrollBar::sub-line:horizontal,
+QTableWidget QScrollBar::add-page:horizontal,
+QTableWidget QScrollBar::sub-page:horizontal {
+    background: transparent;
+    width: 0px;
+}
+QPushButton {
+	border: 1px solid white;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 8px;
+}
+QPushButton:hover {
+	border: 2px solid white;
+	background: rgb(15, 65, 159)
+}</string>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Найденные операции</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_4" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>3</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>6</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="text_info">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background:none;
+color: rgb(255, 85, 85);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>3</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Onyx</family>
+                   <pointsize>13</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: none</string>
+                 </property>
+                 <property name="text">
+                  <string>Переходы, которые будут добавлены:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_clear_table">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;
+	width: 110px;
+	background-color: none;
+	padding: 2 5 2 5
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Очистить таблицу</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="table_widget_sborka">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">/* Сам виджет — прозрачный фон */
+QTableWidget {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    gridline-color: rgba(255, 255, 255, 0.15);
+    selection-background-color: rgba(255, 255, 255, 0.25);
+    selection-color: #ffffff;
+}
+
+/* Ячейки — без фона, белый текст */
+QTableWidget::item {
+    background: transparent;
+    color: #ffffff;
+    padding: 4px 6px;
+    border: none;
+	border-left: 1px solid rgba(255, 255, 255, 0.15);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+
+}
+
+QTableWidget::item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+QTableWidget::item:selected {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Заголовки — ЕДИНСТВЕННОЕ место с фоном */
+QHeaderView::section {
+    background-color: rgb(21, 69, 140);
+    color: #ffffff;
+    padding: 6px 8px;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+QHeaderView::section:hover {
+    background-color: #3a3a3a;
+}
+
+/* Угловая кнопка (пересечение заголовков) */
+QTableCornerButton::section {
+    background-color:  rgb(21, 69, 140);
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Скроллбары — минимально, чтобы не мешали */
+QTableWidget QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+}
+
+QTableWidget QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical,
+QTableWidget QScrollBar::add-page:vertical,
+QTableWidget QScrollBar::sub-page:vertical {
+    background: transparent;
+    height: 0px;
+}
+
+QTableWidget QScrollBar:horizontal {
+    background: transparent;
+    height: 8px;
+}
+
+QTableWidget QScrollBar::handle:horizontal {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QTableWidget QScrollBar::handle:horizontal:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+QTableWidget QScrollBar::add-line:horizontal,
+QTableWidget QScrollBar::sub-line:horizontal,
+QTableWidget QScrollBar::add-page:horizontal,
+QTableWidget QScrollBar::sub-page:horizontal {
+    background: transparent;
+    width: 0px;
+}
+QPushButton {
+	border: 1px solid white;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 8px;
+}
+QPushButton:hover {
+	border: 2px solid white;
+	background: rgb(15, 65, 159)
+}</string>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
+               </property>
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="autoScroll">
+                <bool>false</bool>
+               </property>
+               <property name="showGrid">
+                <bool>true</bool>
+               </property>
+               <property name="rowCount">
+                <number>0</number>
+               </property>
+               <property name="columnCount">
+                <number>3</number>
+               </property>
+               <attribute name="horizontalHeaderVisible">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderMinimumSectionSize">
+                <number>90</number>
+               </attribute>
+               <attribute name="verticalHeaderDefaultSectionSize">
+                <number>100</number>
+               </attribute>
+               <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderStretchLastSection">
+                <bool>false</bool>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Инструмент</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Описание [Можно изменять]</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string/>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignHCenter">
+            <widget class="QPushButton" name="btn_save_and_export">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 10px;
+	height: 20px;	
+	background-color: rgb(185, 57, 41);
+	padding: 2 5 5 5;
+	font-size: 11pt;
+}
+QPushButton:hover {
+	background-color: rgb(0, 111, 171)
+}
+QPushButton:pressed {
+	background-color: rgb(0, 53, 93)
+}</string>
+             </property>
+             <property name="text">
+              <string>Перенести переходы в ТехноПро</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

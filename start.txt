@@ -1,0 +1,6 @@
+start
+& "S:\python\projects\PythonProject_tutorialPySide6\.venv\Lib\site-packages\PySide6\uic.exe" -g python ui_page_tokarnaya.ui -o ui_page_tokarnaya.py
+& "S:\python\projects\PythonProject_tutorialPySide6\.venv\Lib\site-packages\PySide6\uic.exe" -g python ui_page_tokarnaya_start.ui -o ui_page_tokarnaya_start.py
+& "S:\python\projects\PythonProject_tutorialPySide6\.venv\Lib\site-packages\PySide6\uic.exe" -g python ui_page_select_operation.ui -o ui_page_select_operation.py
+& "S:\python\projects\PythonProject_tutorialPySide6\.venv\Lib\site-packages\PySide6\uic.exe" -g python ui_page_tokarnaya_podrezka.ui -o ui_page_tokarnaya_podrezka.py
+& "S:\python\projects\PythonProject_tutorialPySide6\.venv\Lib\site-packages\PySide6\uic.exe" -g python ui_autoinput.ui -o ui_autoinput.py

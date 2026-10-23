@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Rage</family>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>ТехноПомощник</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res/res.qrc">
+    <normaloff>:/icons/logo_cut.png</normaloff>:/icons/logo_cut.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: white;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(0, 57, 95), stop:1 rgb(0, 83, 122));
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>20</number>
+      </property>
+      <widget class="PageSelectOperation" name="page_select_operation">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>1080</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3"/>
+      </widget>
+      <widget class="PageTokarnaya" name="page_tokarnaya">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>1080</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="PageTokarnayaStart" name="page_tokarnaya_start">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>1080</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_17"/>
+      </widget>
+      <widget class="PageTokarnayaPodrezka" name="page_tokarnaya_podrezka">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>1080</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8"/>
+      </widget>
+      <widget class="PageTokarnayaTochenie" name="page_tokarnaya_tochenie">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>1080</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="PageTokarnayaSverlenie" name="page_tokarnaya_sverlenie">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>1080</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="PageInputTechnopro" name="page_input_technopro">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>1080</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="PageTokarnayaRastachivanie" name="page_tokarnaya_rastachivanie"/>
+      <widget class="PageTokarnayaRezba" name="page_tokarnaya_rezba"/>
+      <widget class="PageTokarnayaFaska" name="page_tokarnaya_faska"/>
+      <widget class="PageTokarnayaAngle" name="page_tokarnaya_angle"/>
+      <widget class="PageRazmetka" name="page_razmetka"/>
+      <widget class="PageSverlilnaya" name="page_sverlilnaya">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>900</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="PageTehnoIot" name="page_tehno_iot"/>
+      <widget class="PageSborka" name="page_sborka">
+       <property name="minimumSize">
+        <size>
+         <width>1200</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="PageNormirovanie" name="page_normirovanie"/>
+      <widget class="PageKontrolOtk" name="page_kontrol_otk"/>
+      <widget class="PageMarkirovanie" name="page_markirovanie"/>
+      <widget class="PageShlifovanie" name="page_shlifovanie"/>
+      <widget class="PageShlifovanieStart" name="page_shlifovanie_start"/>
+      <widget class="PageShlifovanieOsnovnoe" name="page_shlifovanie_osnovnoe"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PageTokarnaya</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageSelectOperation</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_select_operation</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTokarnayaPodrezka</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya_podrezka</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTokarnayaStart</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya_start</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTokarnayaTochenie</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya_tochenie</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTokarnayaSverlenie</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya_sverlenie</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageInputTechnopro</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_input_technopro</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTokarnayaRastachivanie</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya_rastachivanie</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTokarnayaRezba</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya_rezba</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTokarnayaFaska</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya_faska</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTokarnayaAngle</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tokarnaya_angle</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageRazmetka</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_razmetka</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageSverlilnaya</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_sverlilnaya</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageSborka</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_sborka</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageTehnoIot</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_tehno_iot</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageNormirovanie</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_normirovanie</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageKontrolOtk</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_kontrol_otk</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageMarkirovanie</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_markirovanie</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageShlifovanie</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_shlifovanie</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageShlifovanieStart</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_shlifovanie_start</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageShlifovanieOsnovnoe</class>
+   <extends>QWidget</extends>
+   <header>views.pages.page_shlifovanie_osnovnoe</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,74 @@
+<RCC>
+  <qresource prefix="sverlovka">
+    <file>sverlovka/otv_ne_skv-no_back.png</file>
+    <file>sverlovka/otv_skv-no_back.png</file>
+  </qresource>
+  <qresource prefix="shlifovka">
+    <file>shlifovanie.PNG</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>start.png</file>
+    <file>update.png</file>
+    <file>trash_grey.png</file>
+    <file>trash.png</file>
+    <file>tokarniy.png</file>
+    <file>time.png</file>
+    <file>save.png</file>
+    <file>return_white.png</file>
+    <file>return_grey.png</file>
+    <file>read_excel.png</file>
+    <file>protochka_out-no-bg-preview (carve.photos) (1).png</file>
+    <file>protochka_in-no-bg-preview (carve.photos) (1).png</file>
+    <file>operations_tehno.png</file>
+    <file>logo_cut.png</file>
+    <file>logo_cut.ico</file>
+    <file>logo.png</file>
+    <file>logo — копия.png</file>
+    <file>home.png</file>
+    <file>find_white.png</file>
+    <file>find_grey.png</file>
+    <file>export.png</file>
+    <file>clear_string.png</file>
+    <file>clear_click.png</file>
+    <file>clear.png</file>
+    <file>cancel_white.png</file>
+    <file>cancel_grey.png</file>
+    <file>back2.png</file>
+    <file>back.png</file>
+    <file>arrow_right.png</file>
+  </qresource>
+  <qresource prefix="tokar">
+    <file>kanavka-no-back.png</file>
+    <file>rastach-no-back.png</file>
+    <file>faska-no-back.png</file>
+    <file>sverlenie_no_back.png</file>
+    <file>rezba-no-back.png</file>
+    <file>tochenie_no_back.png</file>
+    <file>podrezka_no_back.png</file>
+    <file>angle-no-back.png</file>
+    <file>tok_start_no_back.png</file>
+  </qresource>
+  <qresource prefix="operations">
+    <file>operations/shlifovka.PNG</file>
+    <file>operations/cut.png</file>
+    <file>operations/markirovanie.PNG</file>
+    <file>operations/shpatlevanie.PNG</file>
+    <file>operations/term_obrabotka.PNG</file>
+    <file>operations/balance.PNG</file>
+    <file>operations/elect_ispit.PNG</file>
+    <file>operations/gel_ispit.PNG</file>
+    <file>operations/hydro_ispit.PNG</file>
+    <file>operations/painting.PNG</file>
+    <file>operations/promivka-no-bg-preview (carve.photos).png</file>
+    <file>operations/sborka.PNG</file>
+    <file>operations/slesarnaya.PNG</file>
+    <file>operations/svarka.PNG</file>
+    <file>operations/sborka-no-bg.png</file>
+    <file>operations/otk-no-bg.png</file>
+    <file>operations/goriz-no-bg.png</file>
+    <file>operations/frezernaya-no-bg.png</file>
+    <file>operations/razmetka-no-bg.png</file>
+    <file>operations/sverlovka-no-bg.png</file>
+    <file>operations/tokarnaya-no-bg.png</file>
+  </qresource>
+</RCC>

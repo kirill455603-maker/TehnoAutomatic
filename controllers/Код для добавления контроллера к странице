@@ -1,0 +1,44 @@
+from ui_autoinput import Ui_MainWindow
+from views.pages.page_markirovanie import PageMarkirovanie
+from controllers.base_controller import BaseOperationController
+from logic.operation_all_slesarnie import AllSlesarnie
+from logic.automation import TechnoproAutomation
+
+class MarkirovanieController(BaseOperationController):
+    def __init__(self, ui, parent=None):
+        super().__init__(ui, AllSlesarnie(), TechnoproAutomation(), parent)
+        self.ui:Ui_MainWindow = ui
+        self.model:AllSlesarnie = AllSlesarnie()
+        self.automation:TechnoproAutomation = TechnoproAutomation()
+
+        self.ui.page_markirovanie.btn_home_clicked.connect(self._go_to_main_page)
+        self.ui.page_markirovanie.btn_save_clicked.connect(self._save_result)
+
+    def _save_result(self):
+        self.clear_all()
+        d = self.ui.page_markirovanie.get_result()
+        if not d['чертеж']:
+            self.ui.page_markirovanie.error_style_sheet() #Ошибка при вводе
+            return
+        result = self.model.markirovanie(d)
+        self._process_and_save_result(result)
+        self.ui.page_markirovanie.set_show_result(
+            text=self.model.operations[self.model.count - 1]['описание'].clone(),
+            instrument=self.model.operations[self.model.count - 1]['инструмент'].clone()
+        )
+    def get_operation_name(self) -> str:
+        return 'Маркирование'
+
+    def get_target_page(self):
+        return self.ui.page_markirovanie
+
+    def clear_all(self):
+        """Очистка всех данных операции."""
+        self.model.clear_all()
+        self.model.all_instrument.clear()
+
+    def go_to_main_page(self):
+        self.ui.stackedWidget.setCurrentIndex(17)
+
+    def _go_to_main_page(self):
+        self.exit_to_main_menu_requested.emit()
